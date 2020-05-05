@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@stylesheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminDash">
+    <children>
+        <BorderPane layoutX="100.0" layoutY="61.0" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label id="bigLabel" fx:id="greeting" alignment="CENTER" contentDisplay="CENTER" prefWidth="166.0" text="Hello" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Blanks" text="Blank Creation" />
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Database" text="Database" />
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Stock" text="Blank Stock" />
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Register" text="Register User" />
+                    </children>
+                </VBox>
+            </center>
+            <top>
+                <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox prefHeight="100.0" prefWidth="405.0">
+                            <children>
+                                <Label text="Administrator Dashboard" textFill="WHITE" />
+                                <Label fx:id="labelID" text="User ID:" textFill="WHITE" />
+                        <Label fx:id="labelName" text="User Name:" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                            </children>
+                        </VBox>
+                        <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Profile" text="Profile" />
+                        <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </BorderPane.margin>
+                </HBox>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

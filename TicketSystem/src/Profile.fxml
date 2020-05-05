@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@stylesheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Profile">
+   <children>
+      <BorderPane layoutX="200.0" layoutY="26.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="405.0">
+                     <children>
+                        <Label styleClass="header" text="User Profile" textFill="WHITE" />
+                     </children>
+                  </VBox>
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Home" text="Home" />
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="labelID" styleClass="header" text="ID:" textFill="WHITE" />
+                  <Label fx:id="labelName" text="Name:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelJobRole" text="Role:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="35.0" prefWidth="560.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="labelEmail" text="Email:" />
+                        <Button mnemonicParsing="false" onAction="#ChangeEmail" text="Change" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="33.0" prefWidth="560.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="labelPassword" text="Password:" />
+                        <Button mnemonicParsing="false" onAction="#ChangePassword" text="Change" />
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@stylesheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdvisorSellBlank3">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="900.0">
+         <top>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="405.0">
+                     <children>
+                        <Label styleClass="header" text="Advisor - Sell Blank - 3. Confirm Details" textFill="WHITE" />
+                        <Label fx:id="labelID" styleClass="header" text="User ID:" textFill="WHITE" />
+                        <Label fx:id="labelName" styleClass="header" text="User Name:" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Profile" text="Profile" />
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <VBox fx:id="basePane" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox minWidth="250.0" prefHeight="100.0" prefWidth="250.0">
+                     <children>
+                        <VBox minWidth="270.0" prefHeight="191.0" prefWidth="337.0">
+                           <children>
+                              <Label text="CUSTOMER">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="custIDLabel" text="Customer ID: " />
+                              <Label fx:id="custNameLabel" text="Customer Name: " />
+                              <Label fx:id="custTypeLabel" text="Customer Type:" />
+                              <Label fx:id="custEmailLabel" text="Customer Email:" />
+                           </children>
+                        </VBox>
+                        <VBox minWidth="270.0" prefHeight="191.0" prefWidth="333.0">
+                           <children>
+                              <Label text="PAYMENT">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="paymentIDLabel" styleClass="header" text="Payment ID:" />
+                              <Label fx:id="paymentTypeLabel" styleClass="header" text="Payment Type:" />
+                              <Label fx:id="cardNoLabel" styleClass="header" text="Card Number:" />
+                              <Label fx:id="cardExpiryLabel" styleClass="header" text="Card Expiry Date:" />
+                              <Label fx:id="cardSecurityLabel" styleClass="header" text="Card Security No:" />
+                              <Label fx:id="deadlineLabel" styleClass="header" text="Payment Deadline:" />
+                              <Label fx:id="saleIDLabel" styleClass="header" text="Sale ID:" />
+                           </children>
+                        </VBox>
+                        <VBox minWidth="270.0" prefHeight="191.0" prefWidth="311.0">
+                           <children>
+                              <Label text="TICKET">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="blankIDLabel" text="Ticket ID: " />
+                              <Label fx:id="blankTypeLabel" text="Ticket Type: " />
+                              <Label fx:id="coupon1Label" styleClass="header" text="Coupon 1:" />
+                              <Label fx:id="coupon2Label" styleClass="header" text="Coupon 2:" />
+                              <Label fx:id="coupon3Label" styleClass="header" text="Coupon 3:" />
+                              <Label fx:id="coupon4Label" styleClass="header" text="Coupon 4:" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox minWidth="270.0" prefHeight="127.0" prefWidth="270.0">
+                           <children>
+                              <Label text="PRICING">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="subtotalLabel" styleClass="header" text="Subtotal Fare: " />
+                              <Label fx:id="commissionLabel" styleClass="header" text="Advisor Commission: " />
+                              <Label fx:id="discountLabel" styleClass="header" text="Customer Discount: " />
+                              <Label fx:id="totalLabel" styleClass="header" text="Total Cost: " />
+                              <Label fx:id="agencyLabel" styleClass="header" text="Payable to Agency:" />
+                              <Label fx:id="advisorPayLabel" styleClass="header" text="Payable to Adisor:" />
+                           </children>
+                        </VBox>
+                        <VBox minWidth="250.0" prefHeight="127.0" prefWidth="250.0">
+                           <children>
+                              <CheckBox fx:id="paidCheckBox" mnemonicParsing="false" text="Confirm Paid" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="feedback" text="Feedback Label">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <buttons>
+                  <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#Confirm" text="Confirm" />
+                  <Button mnemonicParsing="false" onAction="#Cancel" text="Cancel" />
+               </buttons>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </ButtonBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
