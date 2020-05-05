@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@stylesheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminDatabase">
+   <children>
+      <BorderPane layoutX="167.0" layoutY="76.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="405.0">
+                     <children>
+                        <Label styleClass="header" text="Administrator - Database Management" textFill="WHITE" />
+                        <Label fx:id="labelID" styleClass="header" text="User ID:" textFill="WHITE" />
+                        <Label fx:id="labelName" text="User Name:" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Profile" text="Profile" />
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                        <ChoiceBox fx:id="tableChoice" prefWidth="150.0" />
+                      <Button mnemonicParsing="false" onAction="#AddRow" text="Add Row" />
+                        <Button mnemonicParsing="false" onAction="#DeleteRow" text="Delete Selected Row" />
+                        <Button mnemonicParsing="false" onAction="#EditRow" text="Edit Selected Row" />
+                    </items>
+                  </ToolBar>
+                  <TableView fx:id="tableView" minHeight="200.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Label fx:id="feedback" text="Success/Error">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#Back" text="Back" />
+                  <Button mnemonicParsing="false" onAction="#BackupDatabase" text="Backup Database" />
+                  <Button mnemonicParsing="false" onAction="#restoreDatabase" text="Restore Backup" />
+              </buttons>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </ButtonBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

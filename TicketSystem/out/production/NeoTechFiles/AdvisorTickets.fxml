@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="rootPane" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" stylesheets="@stylesheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdvisorTickets">
+   <children>
+      <BorderPane minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0">
+         <top>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="405.0">
+                     <children>
+                        <Label styleClass="header" text="Advisor - Sold Tickets, Sales, Payments, Refunds" textFill="WHITE" />
+                        <Label fx:id="labelID" styleClass="header" text="User ID:" textFill="WHITE" />
+                        <Label fx:id="labelName" text="User Name:" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Profile" text="Profile" />
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                     <items>
+                        <ChoiceBox fx:id="tableChoice" prefWidth="150.0" />
+                        <Button fx:id="refundButton" mnemonicParsing="false" onAction="#Refund" text="Refund Ticket" />
+                        <Button fx:id="paidButton" mnemonicParsing="false" onAction="#Paid" text="Set Paid" />
+                        <Button fx:id="unpaidButton" mnemonicParsing="false" onAction="#Unpaid" text="Set Unpaid" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                     <items>
+                        <TextField fx:id="inputField" promptText="Search..." />
+                        <Button mnemonicParsing="false" onAction="#Search" text="Search" />
+                        <Button mnemonicParsing="false" onAction="#ShowAll" text="Show All" />
+                     </items>
+                  </ToolBar>
+                  <TableView fx:id="tableView" minHeight="200.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Label fx:id="feedback" text="Feedback Label">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <buttons>
+                  <Button mnemonicParsing="false" onAction="#Blanks" text="Blank Stock" />
+                  <Button mnemonicParsing="false" onAction="#Back" text="Dashboard" />
+               </buttons>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </ButtonBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

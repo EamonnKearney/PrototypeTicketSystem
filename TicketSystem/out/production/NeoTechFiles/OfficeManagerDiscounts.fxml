@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="900.0" stylesheets="@stylesheets/styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OfficeManagerDiscounts">
+   <children>
+      <BorderPane layoutX="221.0" layoutY="41.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="405.0">
+                     <children>
+                        <Label text="Office Manager - Manage Discount Plan" textFill="WHITE" />
+                        <Label fx:id="labelID" text="User ID:" textFill="WHITE" />
+                        <Label fx:id="labelName" text="User Name:" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Profile" text="Profile" />
+                  <Button alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#Back" text="Back" />
+                  <Button mnemonicParsing="false" onAction="#Apply" text="Apply" />
+              </buttons>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </ButtonBar>
+         </bottom>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="customerIDLabel" text="Customer ID:" />
+                  <Label text="Note: Creating a new dscount plan for a customer overwrites any previous plans." />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Discount ID: " />
+                        <TextField fx:id="discountIDField" />
+                        <Button mnemonicParsing="false" onAction="#GenerateID" text="Generate ID" />
+                     </children>
+                  </HBox>
+                  <CheckBox fx:id="flexibleCheck" mnemonicParsing="false" text="Flexible Discount" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <HBox fx:id="fixedForm" prefHeight="99.0" prefWidth="285.0" spacing="10.0">
+                           <children>
+                              <Label text="Discount:" />
+                              <Spinner fx:id="fixedDiscountSpinner" maxWidth="100.0" prefHeight="25.0" prefWidth="131.0" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="flexibleForm" prefHeight="100.0" prefWidth="369.0" spacing="10.0">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="211.0">
+                                 <children>
+                                    <Label text="Domestic discount:" />
+                                    <Label text="International discount:" />
+                                    <Label text="Misc. charge discount:" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="145.0">
+                                 <children>
+                                    <Spinner fx:id="domesticSpinner" maxWidth="100.0" />
+                                    <Spinner fx:id="internationalSpinner" maxWidth="100.0" />
+                                    <Spinner fx:id="miscSpinner" maxWidth="100.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="feedback" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
